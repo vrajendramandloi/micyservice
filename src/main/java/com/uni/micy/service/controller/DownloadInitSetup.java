@@ -29,4 +29,22 @@ public class DownloadInitSetup {
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + resource.getFilename() + "\"")
                 .body(resource);       
     }
+	
+	@GetMapping("/initsetup/download_dummy")
+    public ResponseEntity<?> downloadDummyFile() {
+        Resource resource = null;
+        try {
+        	resource = new ClassPathResource("micyInitSetup_dummy.zip");
+        } catch (Exception e) {
+            return new ResponseEntity<>("File not found", HttpStatus.NOT_FOUND);
+        }
+         
+        if (resource == null) {
+            return new ResponseEntity<>("File not found", HttpStatus.NOT_FOUND);
+        }
+        return ResponseEntity.ok()
+                .contentType(MediaType.parseMediaType("application/octet-stream"))
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + resource.getFilename() + "\"")
+                .body(resource);       
+    }
 }
