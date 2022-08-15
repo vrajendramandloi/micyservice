@@ -1,0 +1,34 @@
+gcloud init
+# this will ask for user to login and associate a project with the same
+gcloud auth login
+# this will ask user for login only
+gcloud config set project vrajendra2020apps
+# set the Project name 
+
+gcloud projects add-iam-policy-binding run-to-sql --members serviceAccount:service-vicky2020jan@vicky2020jan.iam.gserviceaccount.com --role roles/cloudsql.client
+
+## create a new Container with project name and link with build (Service is not created yet as this will register the Docker first and then will initialize things for you)
+gcloud builds submit --tag gcr.io/vrajendra2020apps/myoutuberimage
+
+## Just to Deploy to a created Service
+gcloud run deploy myoutuberlive2020 --image=gcr.io/vrajendra2020apps/myoutuberimage:latest --platform managed --allow-unauthenticated --region asia-south1
+
+gcloud run deploy myoutuberlive2020 --image=gcr.io/vrajendra2020apps/myoutuberimage:latest
+
+## Create new Service i.e. instance to SQL 1 time only
+gcloud run deploy myoutuberlive2020 --image=gcr.io/vrajendra2020apps/myoutuberimage:latest --add-cloudsql-instances vrajendra2020apps:asia-south1:vrajendra2020mysqldb --update-env-vars INSTANCE_CONNECTION_NAME="vrajendra2020apps:asia-south1:vrajendra2020mysqldb" --platform managed --allow-unauthenticated --region asia-south1
+
+
+
+## Updating existing service 
+gcloud run services update liveservice2020jan --add-cloudsql-instances vrajendra2020apps:asia-south1:vrajendra2020mysqldb --update-env-vars INSTANCE_CONNECTION_NAME="vrajendra2020apps:asia-south1:vrajendra2020mysqldb"
+
+
+
+curl -X POST localhost:8080/shutdownContext
+
+
+Commands:
+gcloud config list ==> to view Project configuration + account
+gcloud config configurations list ==> which service account is associated with this account
+gcloud projects list ==> list all projects post gcloud auth 
