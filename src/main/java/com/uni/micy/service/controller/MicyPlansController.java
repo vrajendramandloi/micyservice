@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sun.xml.internal.ws.util.StringUtils;
 import com.uni.micy.service.model.PlanDetails;
 import com.uni.micy.service.util.AppUtils;
 
