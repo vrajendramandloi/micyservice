@@ -1,7 +1,11 @@
 package com.uni.micy.service.controller;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -37,20 +41,26 @@ public class UserIdController {
 		Map<Character, Integer> map = new HashMap<Character, Integer>();
 		for (char c : carr) {
 			Integer value = map.get(c);
-			if (value != null) {
+			if (value == null) {
 				value = 0;
 			}
 			map.put(c, ++value);
 		}
-		String finalOutput = "";
-		int value = 1;
 		String keysString = "";
 		for (Map.Entry<Character, Integer> entries : map.entrySet()) {
-			keysString += entries.getKey().toString();
-			value += entries.getValue();
+			keysString += Character.isLetterOrDigit(entries.getKey()) ? entries.getKey().toString() : entries.getValue();
 		}
-		value = (value * 13) + 786;
-		finalOutput = keysString.substring(0, 2) + value;
-		return ud.getMobilenum()+finalOutput.toUpperCase();
+		keysString = shuffleString(keysString);
+		return ud.getMobilenum()+keysString.toUpperCase().substring(0,6);
+	}
+	
+	public static String shuffleString(String string) {
+	  List<String> letters = Arrays.asList(string.split(""));
+	  Collections.shuffle(letters);
+	  String shuffled = "";
+	  for (String letter : letters) {
+	    shuffled += letter;
+	  }
+	  return shuffled;
 	}
 }
