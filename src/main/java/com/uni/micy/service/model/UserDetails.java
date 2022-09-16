@@ -1,7 +1,5 @@
 package com.uni.micy.service.model;
 
-import java.util.Date;
-
 public class UserDetails {
 	String uid;
 	String fullname;

@@ -16,7 +16,7 @@ import com.uni.micy.service.model.UserDetails;
 public class UserIdController {
 
 	@PostMapping("/generateUid")
-	public synchronized UniResponse registerUser(@RequestBody UserDetails userDetails) {
+	public synchronized UniResponse generateUserUid(@RequestBody UserDetails userDetails) {
 		try {
 			String uid = generateUid(userDetails);
 			return new UniResponse("SUCCESS", "uid:" + uid);
