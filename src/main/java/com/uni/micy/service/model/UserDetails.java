@@ -7,7 +7,7 @@ public class UserDetails {
 	String fullname;
 	String emailid;
 	String mobilenum;
-	Date dob;
+	String dob;
 
 	public UserDetails() {
 	}
@@ -44,11 +44,11 @@ public class UserDetails {
 		this.mobilenum = mobilenum;
 	}
 
-	public Date getDob() {
+	public String getDob() {
 		return dob;
 	}
 
-	public void setDob(Date dob) {
+	public void setDob(String dob) {
 		this.dob = dob;
 	}
 
