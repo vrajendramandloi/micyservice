@@ -10,18 +10,22 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.uni.micy.service.model.UniResponse;
 import com.uni.micy.service.model.UserDetails;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @RestController
 @RequestMapping("/userdetails")
 public class UserIdController {
-
+	public static Logger logger = LoggerFactory.getLogger(UserIdController.class);
+	
 	@PostMapping("/generateUid")
 	public synchronized UniResponse generateUserUid(@RequestBody UserDetails userDetails) {
 		try {
+			logger.info("userDetails object created "+ userDetails.toString());
 			String uid = generateUid(userDetails);
 			return new UniResponse("SUCCESS", "uid:" + uid);
 		} catch (Exception e) {
-
+			logger.error("Exception while Creating UID ", e);
 		}
 		return new UniResponse("FAILURE", null);
 	}
