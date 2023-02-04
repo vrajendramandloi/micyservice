@@ -71,12 +71,15 @@
 				<configuration>
 					<mainClass>com.uni.micy.service.AppMainLauncher</mainClass>
 				</configuration>
-
 				<executions>
 					<execution>
+						<id>repackage1</id>
 						<goals>
 							<goal>repackage</goal>
 						</goals>
+						<configuration>
+							<finalName>micyservice</finalName>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>

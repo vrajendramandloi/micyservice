@@ -43,30 +43,18 @@ public class MicyPlansController {
 	List<PlanDetails> loadPlansforINR() {
 		List<PlanDetails> planList = new ArrayList<PlanDetails>();
 		
-		PlanDetails plan1 = new PlanDetails(101, 360, "Annual-A", 151, 199, "INR", "ACTIVE", "IND", "APP_ACTIVATE");
-		plan1.setPlanDesc("(1 Year Plan) Enable all Utility functions of MICY App. U can use My Diary,Notes, Journal, Organizing List, Calendar, Finance etc..");
+		PlanDetails plan1 = new PlanDetails(101, 1111, "Prime-A", 361, 361, "INR", "ACTIVE", "IND", "APP_ACTIVATE");
+		plan1.setPlanDesc("Becoming Prime enables all app functions for the user. All App functions can be used offline on device. Following are app main utils: \n* My Diary \n* Notes \n* Plan List \n* Calendar \n* Self Tracker + Finance");
 		planList.add(plan1);
-		PlanDetails plan2 = new PlanDetails(103, 720, "Annual-B", 256, 499, "INR", "ACTIVE", "IND", "APP_ACTIVATE");
-		plan2.setPlanDesc("(2 Year Plan) Enable all Utility functions of MICY App. U can use My Diary,Notes, Journal, Organizing List, Calendar, Finance etc..");
-		planList.add(plan2);
-		PlanDetails plan3 = new PlanDetails(103, 1821, "Annual-E", 996, 1499, "INR", "ACTIVE", "IND", "APP_ACTIVATE");
-		plan3.setPlanDesc("(5 Year Plan) Enable all Utility functions of MICY App. U can use My Diary,Notes, Journal, Organizing List, Calendar, Finance etc..");
-		planList.add(plan3);
 		return planList;
 	}
 	
 	List<PlanDetails> loadPlansforUSD() {
 		List<PlanDetails> planList = new ArrayList<PlanDetails>();
 		
-		PlanDetails plan1 = new PlanDetails(105, 360, "Annual-A", 2.52, 3.50, "USD", "ACTIVE", "USA", "APP_ACTIVATE");
-		plan1.setPlanDesc("(1 Year Plan) Enable all Utility functions of MICY App. U can use My Diary,Notes, Journal, Organizing List, Calendar, Finance etc..");
+		PlanDetails plan1 = new PlanDetails(105, 1111, "Prime-A", 3.61, 3.61, "USD", "ACTIVE", "USA", "APP_ACTIVATE");
+		plan1.setPlanDesc("Becoming Prime enables all app functions for the user. All App functions can be used offline on device. Following are app main utils: \n* My Diary \n* Notes \n* Plan List \n* Calendar \n* Self Tracker + Finance");
 		planList.add(plan1);
-		PlanDetails plan2 = new PlanDetails(106, 720, "Annual-B", 4.41, 6.50, "USD", "ACTIVE", "USA", "APP_ACTIVATE");
-		plan2.setPlanDesc("(2 Year Plan) Enable all Utility functions of MICY App. U can use My Diary,Notes, Journal, Organizing List, Calendar, Finance etc..");
-		planList.add(plan2);
-		PlanDetails plan3 = new PlanDetails(107, 1821, "Annual-E", 19.92, 25.25, "USD", "ACTIVE", "USA", "APP_ACTIVATE");
-		plan3.setPlanDesc("(5 Year Plan) Enable all Utility functions of MICY App. U can use My Diary,Notes, Journal, Organizing List, Calendar, Finance etc..");
-		planList.add(plan3);
 		return planList;
 	}
 }
