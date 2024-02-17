@@ -7,7 +7,7 @@ public class AppUtils {
 	}
 	public static synchronized String getCurrency(String country) {
 		String currency = "INR";
-		if(!country.equalsIgnoreCase("INDIA")) {
+		if(!"INDIA".equalsIgnoreCase(country)) {
 			currency = "USD";
 		}
 		return currency;

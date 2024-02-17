@@ -43,9 +43,18 @@ public class MicyPlansController {
 	List<PlanDetails> loadPlansforINR() {
 		List<PlanDetails> planList = new ArrayList<PlanDetails>();
 		
-		PlanDetails plan1 = new PlanDetails(101, 1111, "Prime-A", 361, 361, "INR", "ACTIVE", "IND", "APP_ACTIVATE");
-		plan1.setPlanDesc("Becoming Prime enables all app functions for the user. All App functions can be used offline on device. Following are app main utils: \n* My Diary \n* Notes \n* Plan List \n* Calendar \n* Self Tracker + Finance");
+		PlanDetails plan1 = new PlanDetails(101, 365, "Free", 0, 0, "INR", "ACTIVE", "IND", "APP_ACTIVATE");
+		plan1.setPlanDesc("All Free app functions are available for the user. All App functions can be used offline on device. Ad's will be available when online. "
+				+ "Following are app main utils: \n* Manage Asset & Family. \n* Manage Portfolio's \n* Notes \n* Plan List \n* Calendar \n* Self Tracker ");
 		planList.add(plan1);
+		PlanDetails plan2 = new PlanDetails(101, 1111, "Prime-Family", 199, 199, "INR", "ACTIVE", "IND", "APP_ACTIVATE");
+		plan2.setPlanDesc("All Free App Features are available only Ad's are Remove Ad's. "
+				+ "Following are app main utils: \n* Manage Asset & Family. \n* Manage Portfolio's \n* Notes \n* Plan List \n* Calendar \n* Self Tracker");
+		planList.add(plan2);
+		PlanDetails plan3 = new PlanDetails(101, 1111, "Prime-Influencer", 996, 996, "INR", "ACTIVE", "IND", "APP_ACTIVATE");
+		plan3.setPlanDesc("Addon's for Influencers are available in this plan. "
+				+ "Following are app main utils: \n* Schedule Campaign \n* Manage Products \n* Manage Associates \n* Finance");
+		planList.add(plan3);
 		return planList;
 	}
 	
