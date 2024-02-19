@@ -24,13 +24,19 @@ import com.uni.micy.service.model.UserDetails;
 @PropertySource("classpath:mailInfo.properties")
 public class EmailNewRegistration {
 	public static Logger logger = LoggerFactory.getLogger(UserIdController.class);
+
+	@Autowired
 	private JavaMailSender mailSender;
 	@Autowired
 	private Properties mailProperties;
 	public void setMailProperties(Properties mailProperties) {
 		this.mailProperties = mailProperties;
 	}
-	
+
+	public void setMailSender(JavaMailSender mailSender) {
+		this.mailSender = mailSender;
+	}
+
 	@PostConstruct
 	public void init() throws FileNotFoundException, IOException {
 		JavaMailSenderImpl sender = new JavaMailSenderImpl();
@@ -41,7 +47,7 @@ public class EmailNewRegistration {
 		sender.setPassword(mailProperties.getProperty("spring.mail.password"));
 		sender.setProtocol(mailProperties.getProperty("mail.transport.protocol"));
 		sender.setJavaMailProperties(mailProperties);
-		this.mailSender = sender;
+		//this.mailSender = sender;
 	}
 	
 	
@@ -50,10 +56,10 @@ public class EmailNewRegistration {
 		try {
 			logger.info("userDetails object Obtained for Registration : "+ userDetails.toString());
 			SimpleMailMessage msg = new SimpleMailMessage();
+			msg.setFrom("admin@vrajme.co.in");
 			msg.setTo("vrajendra.singh.mandloi@gmail.com");
 			msg.setSubject("Welcome to Micy");
 			msg.setText("Hello World \n Spring Boot Email");
-
 			mailSender.send(msg);
 			return new UniResponse("SUCCESS", "Success ");
 		} catch (Exception e) {
