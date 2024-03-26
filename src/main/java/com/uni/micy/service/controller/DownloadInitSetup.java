@@ -62,6 +62,17 @@ public class DownloadInitSetup {
         }
     }
 
+    @GetMapping("/initsetup/download/generatedZip")
+    public ResponseEntity<?> downloadFileZip() {
+        if (zipResourceFile == null || !zipResourceFile.exists()) {
+            return new ResponseEntity<>("File not found", HttpStatus.NOT_FOUND);
+        }
+        return ResponseEntity.ok()
+                .contentType(MediaType.parseMediaType("application/octet-stream"))
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + zipResourceFile.getName() + "\"")
+                .body(zipResourceFile);
+    }
+
 	@GetMapping("/initsetup/download")
     public ResponseEntity<?> downloadFile() {
         Resource resource = null;
