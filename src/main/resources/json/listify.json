@@ -1,0 +1,38 @@
+[
+    {
+        "index": 1,
+        "name": "GROCERY_DEFAULT",
+        "type": "DASHBOARD",
+        "displayImage": "listifyimage/groceries.jpg",
+        "displayName": "Grocery",
+        "isComplete": false
+    }, {
+        "index": 2,
+        "name": "SHOPPING_DEFAULT",
+        "type": "DASHBOARD",
+        "displayImage": "listifyimage/shopping-cart.jpg",
+        "displayName": "Shopping",
+        "isComplete": false
+    }, {
+        "index": 3,
+        "name": "GOALS_DEFAULT",
+        "type": "DASHBOARD",
+        "displayImage": "listifyimage/clutter.jpg",
+        "displayName": "Goals",
+        "isComplete": false
+    }, {
+        "index": 4,
+        "name": "IDEAS_DEFAULT",
+        "type": "DASHBOARD",
+        "displayImage": "listifyimage/clutter.jpg",
+        "displayName": "Ideas",
+        "isComplete": false
+    }, {
+        "index": 5,
+        "name": "KIDS",
+        "type": "DASHBOARD",
+        "displayImage": "listifyimage/clutter.jpg",
+        "displayName": "D-Clutter",
+        "isComplete": false
+    }
+]
