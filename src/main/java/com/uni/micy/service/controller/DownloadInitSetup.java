@@ -33,10 +33,6 @@ public class DownloadInitSetup {
     public void createZipFile() {
         Resource resource = null;
         try {
-            resource = new ClassPathResource("json/listify.json");
-            File resourceFile = resource.getFile();
-            String resourceFilePath = resourceFile.getAbsolutePath();
-            resourceFilePath = resourceFilePath.replace("listify.json","");
             String jarPath = getClass()
                     .getProtectionDomain()
                     .getCodeSource()
@@ -45,6 +41,10 @@ public class DownloadInitSetup {
                     .getPath();
 
             log.info("Jar Path : "+ jarPath);
+            resource = new ClassPathResource("json/listify.json");
+            File resourceFile = resource.getFile();
+            String resourceFilePath = resourceFile.getAbsolutePath();
+            resourceFilePath = resourceFilePath.replace("listify.json","");
             if(jarPath.contains(".jar")) {
                 jarPath = jarPath.substring(0, jarPath.lastIndexOf("/"));
             }
