@@ -11,8 +11,7 @@ RUN mvn package -DskipTests
 
 FROM adoptopenjdk/openjdk15:alpine-slim
 
-COPY --from=builder /myoutuber2020app/target/*.jar /application.jar
-COPY --from=builder /myoutuber2020app/target/classes/json/*.* /json
+COPY --from=builder /myoutuber2020app/target/common/* /*
 
 RUN ls -ltr /
 RUN hostname -f
