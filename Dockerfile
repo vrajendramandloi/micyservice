@@ -11,9 +11,11 @@ RUN mvn package -DskipTests
 
 FROM adoptopenjdk/openjdk15:alpine-slim
 
-COPY --from=builder /myoutuber2020app/target/common/* /*
+RUN ls -ltr /
+
+COPY --from=builder /myoutuber2020app/target/common/ /
 
 RUN ls -ltr /
 RUN hostname -f
 
-CMD ["java", "-jar", "-Dspring.profiles.active=dev", "/application.jar"]
+CMD ["java", "-jar", "-Dspring.profiles.active=dev", "/micyservice.jar"]
