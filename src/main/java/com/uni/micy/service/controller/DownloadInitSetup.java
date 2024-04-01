@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.PostConstruct;
 import java.io.File;
-import java.net.URI;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -26,86 +25,66 @@ import java.util.stream.Stream;
 @RestController
 @Slf4j
 public class DownloadInitSetup {
-    private File zipResourceFile = null;
+    private File jsonZipGeneratedFile = null;
+    private File soundZipGeneratedFile = null;
     private Logger log = LoggerFactory.getLogger(DownloadInitSetup.class);
+    private String jarPath;
+
+    public String getParentDirectoryFromJar() {
+        String dirtyPath = getClass().getResource("").toString();
+        String jarPath = dirtyPath.replaceAll("^.*file:/", "");
+        jarPath = jarPath.replaceAll("jar!.*", "jar");
+        jarPath = jarPath.replaceAll("%20", " ");
+        if (!jarPath.endsWith(".jar")) {
+            jarPath = jarPath.replaceAll("/classes/.*", "/classes/");
+        }
+        String directoryPath = Paths.get(jarPath).getParent().toString(); //Paths - from java 8
+        return directoryPath;
+    }
 
     @PostConstruct
-    public void createZipFile() {
-        Resource resource = null;
-        try {
-            String jarPath = getClass()
-                    .getProtectionDomain()
-                    .getCodeSource()
-                    .getLocation()
-                    .toURI()
-                    .getPath();
+    public void init() {
+        this.jarPath = getParentDirectoryFromJar();
+        jsonZipGeneratedFile = this.readFromPathAndCreateZip(jarPath+"/json", "jsonConfig.zip");
+        soundZipGeneratedFile = this.readFromPathAndCreateZip(jarPath+"/sound", "soundConfig.zip");
+    }
 
-            log.info("Jar Path : "+ jarPath);
-            resource = new ClassPathResource("json/listify.json");
-            File resourceFile = resource.getFile();
-            String resourceFilePath = resourceFile.getAbsolutePath();
-            resourceFilePath = resourceFilePath.replace("listify.json","");
-            if(jarPath.contains(".jar")) {
-                jarPath = jarPath.substring(0, jarPath.lastIndexOf("/"));
-            }
-            log.info("Jar Path source : "+ jarPath);
-            Path path = Paths.get(resourceFilePath);
+    public File readFromPathAndCreateZip(String dirPath, String zipName) {
+        File file = null;
+        try {
+            Path path = Paths.get(dirPath);
             try (Stream<Path> paths = Files.walk(path)) {
                 List<Path> jsonPathList = paths.filter(x -> x.getFileName().toString().endsWith(".json"))
                         .collect(Collectors.toList());
                 log.info(jsonPathList.toString());
-                zipResourceFile = AppUtils.addFilesToZip(jarPath, jsonPathList);
-                log.info("zipFile "+zipResourceFile.getAbsolutePath());
+                file = AppUtils.addFilesToZip(jarPath, zipName, jsonPathList);
+                log.info("zipFile "+file.getAbsolutePath());
             }
         } catch (Exception e) {
             log.error("Exception while constructing zip of all Json ",e);
         }
+        return file;
     }
 
-    @GetMapping("/initsetup/download/generatedZip")
-    public ResponseEntity<?> downloadFileZip() {
-        if (zipResourceFile == null || !zipResourceFile.exists()) {
+    @GetMapping("/initsetup/download/configZip")
+    public ResponseEntity<?> downloadConfigZip() {
+        if (jsonZipGeneratedFile == null || !jsonZipGeneratedFile.exists()) {
             return new ResponseEntity<>("File not found", HttpStatus.NOT_FOUND);
         }
         return ResponseEntity.ok()
                 .contentType(MediaType.parseMediaType("application/octet-stream"))
-                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + zipResourceFile.getName() + "\"")
-                .body(zipResourceFile);
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + jsonZipGeneratedFile.getName() + "\"")
+                .body(jsonZipGeneratedFile);
     }
 
-	@GetMapping("/initsetup/download")
-    public ResponseEntity<?> downloadFile() {
-        Resource resource = null;
-        try {
-        	resource = new ClassPathResource("micyInitSetup.zip");
-        } catch (Exception e) {
-            return new ResponseEntity<>("File not found", HttpStatus.NOT_FOUND);
-        }
-         
-        if (resource == null) {
+    @GetMapping("/initsetup/download/soundZip")
+    public ResponseEntity<?> downloadSoundZip() {
+        if (soundZipGeneratedFile == null || !soundZipGeneratedFile.exists()) {
             return new ResponseEntity<>("File not found", HttpStatus.NOT_FOUND);
         }
         return ResponseEntity.ok()
                 .contentType(MediaType.parseMediaType("application/octet-stream"))
-                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + resource.getFilename() + "\"")
-                .body(resource);       
-    }
-	
-	@GetMapping("/initsetup/diarysound/download")
-    public ResponseEntity<?> downloadDiarySoundFile() {
-        Resource resource = null;
-        try {
-        	resource = new ClassPathResource("diarysound.zip");
-        } catch (Exception e) {
-            return new ResponseEntity<>("File not found", HttpStatus.NOT_FOUND);
-        }
-         
-        if (resource == null) {
-            return new ResponseEntity<>("File not found", HttpStatus.NOT_FOUND);
-        }
-        return ResponseEntity.ok()
-                .contentType(MediaType.parseMediaType("application/octet-stream"))
-                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + resource.getFilename() + "\"")
-                .body(resource);       
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + soundZipGeneratedFile.getName() + "\"")
+                .body(soundZipGeneratedFile);
     }
 }

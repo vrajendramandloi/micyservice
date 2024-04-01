@@ -23,9 +23,8 @@ public class AppUtils {
         return currency;
     }
 
-    public static File addFilesToZip(String source, List<Path> filesPathList) throws IOException {
-		String zipPath = source+"/micyConfigFile.zip";
-
+    public static File addFilesToZip(String source, String fileName, List<Path> filesPathList) throws IOException {
+		String zipPath = source+"/"+fileName;
 		try (ZipOutputStream zipOut = new ZipOutputStream(new FileOutputStream(zipPath))) {
 			for (Path filePath : filesPathList) {
 				File fileToZip = filePath.toFile();

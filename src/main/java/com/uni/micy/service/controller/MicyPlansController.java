@@ -5,10 +5,7 @@ import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.uni.micy.service.model.PlanDetails;
 import com.uni.micy.service.util.AppUtils;
@@ -24,7 +21,7 @@ public class MicyPlansController {
 	}
 	
 	
-	@RequestMapping(value="/activeplans/{country}",  method = RequestMethod.GET)
+	@GetMapping("/activeplans/{country}")
 	public synchronized ResponseEntity<List<PlanDetails>> getplan(@PathVariable("country") String countryId) {
 		List<PlanDetails> pdList = new ArrayList<PlanDetails>();
 		if(countryId==null && countryId.length() != 0) {
