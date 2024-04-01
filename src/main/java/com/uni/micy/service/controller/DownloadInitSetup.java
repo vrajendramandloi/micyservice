@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -15,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.PostConstruct;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -58,7 +61,7 @@ public class DownloadInitSetup {
                         .collect(Collectors.toList());
                 log.info(jsonPathList.toString());
                 file = AppUtils.addFilesToZip(jarPath, zipName, jsonPathList);
-                log.info("zipFile "+file.getAbsolutePath());
+                log.info("zipFile created : "+file.getAbsolutePath());
             }
         } catch (Exception e) {
             log.error("Exception while constructing zip of all Json ",e);
@@ -67,24 +70,26 @@ public class DownloadInitSetup {
     }
 
     @GetMapping("/initsetup/download/configZip")
-    public ResponseEntity<?> downloadConfigZip() {
+    public ResponseEntity<?> downloadConfigZip() throws FileNotFoundException {
         if (jsonZipGeneratedFile == null || !jsonZipGeneratedFile.exists()) {
             return new ResponseEntity<>("File not found", HttpStatus.NOT_FOUND);
         }
+        Resource resource = new InputStreamResource(new FileInputStream(jsonZipGeneratedFile));
         return ResponseEntity.ok()
                 .contentType(MediaType.parseMediaType("application/octet-stream"))
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + jsonZipGeneratedFile.getName() + "\"")
-                .body(jsonZipGeneratedFile);
+                .body(resource);
     }
 
     @GetMapping("/initsetup/download/soundZip")
-    public ResponseEntity<?> downloadSoundZip() {
+    public ResponseEntity<?> downloadSoundZip() throws FileNotFoundException {
         if (soundZipGeneratedFile == null || !soundZipGeneratedFile.exists()) {
             return new ResponseEntity<>("File not found", HttpStatus.NOT_FOUND);
         }
+        Resource resource = new InputStreamResource(new FileInputStream(soundZipGeneratedFile));
         return ResponseEntity.ok()
                 .contentType(MediaType.parseMediaType("application/octet-stream"))
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + soundZipGeneratedFile.getName() + "\"")
-                .body(soundZipGeneratedFile);
+                .body(resource);
     }
 }
