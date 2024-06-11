@@ -1,0 +1,639 @@
+[
+	{
+		"name": "MILK",
+		"type": "DAILY_TRACKER",
+		"attributeName": "TRACKER_NAME",
+		"attributeVal": "MILK",
+		"isActive": "A"
+	},
+	{
+		"name": "MILK",
+		"type": "DAILY_TRACKER",
+		"attributeName": "TRACKER_TYPE",
+		"attributeVal": "HOUSEHOLD",
+		"isActive": "A"
+	},
+	{
+		"name": "MILK",
+		"type": "DAILY_TRACKER",
+		"attributeName": "FREQUENCY",
+		"attributeVal": "DAILY",
+		"isActive": "A"
+	},
+	{
+		"name": "MILK",
+		"type": "DAILY_TRACKER",
+		"attributeName": "INCREMENT_VAL",
+		"attributeVal": "0.5",
+		"isActive": "A"
+	},
+	{
+		"name": "MILK",
+		"type": "DAILY_TRACKER",
+		"attributeName": "QTY",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "MILK",
+		"type": "DAILY_TRACKER",
+		"attributeName": "UNIT",
+		"attributeVal": "COUNT",
+		"isActive": "A"
+	},
+	{
+		"name": "MILK",
+		"type": "DAILY_TRACKER",
+		"attributeName": "PRICE",
+		"attributeVal": "42",
+		"isActive": "A"
+	},
+	{
+		"name": "MILK",
+		"type": "DAILY_TRACKER",
+		"attributeName": "NOTIFICATION_TYPE",
+		"attributeVal": "EVERY_MONTH_END",
+		"isActive": "A"
+	},
+	{
+		"name": "MILK",
+		"type": "DAILY_TRACKER",
+		"attributeName": "CONTACT_ID",
+		"attributeVal": "0",
+		"isActive": "A"
+	},
+	{
+		"name": "NEWSPAPER",
+		"type": "DAILY_TRACKER",
+		"attributeName": "TRACKER_NAME",
+		"attributeVal": "NEWSPAPER",
+		"isActive": "A"
+	},
+	{
+		"name": "NEWSPAPER",
+		"type": "DAILY_TRACKER",
+		"attributeName": "TRACKER_TYPE",
+		"attributeVal": "HOUSEHOLD",
+		"isActive": "A"
+	},
+	{
+		"name": "NEWSPAPER",
+		"type": "DAILY_TRACKER",
+		"attributeName": "FREQUENCY",
+		"attributeVal": "DAILY",
+		"isActive": "A"
+	},
+	{
+		"name": "NEWSPAPER",
+		"type": "DAILY_TRACKER",
+		"attributeName": "INCREMENT_VAL",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "NEWSPAPER",
+		"type": "DAILY_TRACKER",
+		"attributeName": "QTY",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "NEWSPAPER",
+		"type": "DAILY_TRACKER",
+		"attributeName": "UNIT",
+		"attributeVal": "COUNT",
+		"isActive": "A"
+	},
+	{
+		"name": "NEWSPAPER",
+		"type": "DAILY_TRACKER",
+		"attributeName": "PRICE",
+		"attributeVal": "7",
+		"isActive": "A"
+	},
+	{
+		"name": "NEWSPAPER",
+		"type": "DAILY_TRACKER",
+		"attributeName": "NOTIFICATION_TYPE",
+		"attributeVal": "EVERY_MONTH_END",
+		"isActive": "A"
+	},
+	{
+		"name": "NEWSPAPER",
+		"type": "DAILY_TRACKER",
+		"attributeName": "CONTACT_ID",
+		"attributeVal": "0",
+		"isActive": "A"
+	},
+	{
+		"name": "IRONCLOTHS",
+		"type": "ONDEMAND_TRACKER",
+		"attributeName": "TRACKER_NAME",
+		"attributeVal": "IRONCLOTHS",
+		"isActive": "A"
+	},
+	{
+		"name": "IRONCLOTHS",
+		"type": "ONDEMAND_TRACKER",
+		"attributeName": "TRACKER_TYPE",
+		"attributeVal": "HOUSEHOLD",
+		"isActive": "A"
+	},
+	{
+		"name": "IRONCLOTHS",
+		"type": "ONDEMAND_TRACKER",
+		"attributeName": "FREQUENCY",
+		"attributeVal": "ONDEMAND",
+		"isActive": "A"
+	},
+	{
+		"name": "IRONCLOTHS",
+		"type": "ONDEMAND_TRACKER",
+		"attributeName": "INCREMENT_VAL",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "IRONCLOTHS",
+		"type": "ONDEMAND_TRACKER",
+		"attributeName": "QTY",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "IRONCLOTHS",
+		"type": "ONDEMAND_TRACKER",
+		"attributeName": "UNIT",
+		"attributeVal": "COUNT",
+		"isActive": "A"
+	},
+	{
+		"name": "IRONCLOTHS",
+		"type": "ONDEMAND_TRACKER",
+		"attributeName": "PRICE",
+		"attributeVal": "7",
+		"isActive": "A"
+	},
+	{
+		"name": "IRONCLOTHS",
+		"type": "ONDEMAND_TRACKER",
+		"attributeName": "NOTIFICATION_TYPE",
+		"attributeVal": "EVERY_MONTH_END",
+		"isActive": "A"
+	},
+	{
+		"name": "IRONCLOTHS",
+		"type": "ONDEMAND_TRACKER",
+		"attributeName": "CONTACT_ID",
+		"attributeVal": "0",
+		"isActive": "A"
+	},
+	{
+		"name": "WATER",
+		"type": "SELF_TRACKER",
+		"attributeName": "TRACKER_NAME",
+		"attributeVal": "WATER",
+		"isActive": "A"
+	},
+	{
+		"name": "WATER",
+		"type": "SELF_TRACKER",
+		"attributeName": "TRACKER_TYPE",
+		"attributeVal": "SELF",
+		"isActive": "A"
+	},
+	{
+		"name": "WATER",
+		"type": "SELF_TRACKER",
+		"attributeName": "TARGET_VAL",
+		"attributeVal": "8",
+		"isActive": "A"
+	},
+	{
+		"name": "WATER",
+		"type": "SELF_TRACKER",
+		"attributeName": "CURRENT_VAL",
+		"attributeVal": "2",
+		"isActive": "A"
+	},
+	{
+		"name": "FEELINGS",
+		"type": "SELF_TRACKER",
+		"attributeName": "TRACKER_NAME",
+		"attributeVal": "FEELINGS",
+		"isActive": "A"
+	},
+	{
+		"name": "FEELINGS",
+		"type": "SELF_TRACKER",
+		"attributeName": "TRACKER_TYPE",
+		"attributeVal": "SELF",
+		"isActive": "A"
+	},
+	{
+		"name": "FEELINGS",
+		"type": "SELF_TRACKER",
+		"attributeName": "TARGET_VAL",
+		"attributeVal": "NULL",
+		"isActive": "A"
+	},
+	{
+		"name": "FEELINGS",
+		"type": "SELF_TRACKER",
+		"attributeName": "CURRENT_VAL",
+		"attributeVal": "NULL",
+		"isActive": "A"
+	},
+	{
+		"name": "MEDITATION",
+		"type": "SELF_TRACKER",
+		"attributeName": "TRACKER_NAME",
+		"attributeVal": "MEDITATION",
+		"isActive": "A"
+	},
+	{
+		"name": "MEDITATION",
+		"type": "SELF_TRACKER",
+		"attributeName": "TRACKER_TYPE",
+		"attributeVal": "SELF",
+		"isActive": "A"
+	},
+	{
+		"name": "MEDITATION",
+		"type": "SELF_TRACKER",
+		"attributeName": "TARGET_VAL",
+		"attributeVal": "NULL",
+		"isActive": "A"
+	},
+	{
+		"name": "MEDITATION",
+		"type": "SELF_TRACKER",
+		"attributeName": "CURRENT_VAL",
+		"attributeVal": "NULL",
+		"isActive": "A"
+	},
+	{
+		"name": "EXERCISE",
+		"type": "SELF_TRACKER",
+		"attributeName": "TRACKER_NAME",
+		"attributeVal": "EXERCISE",
+		"isActive": "A"
+	},
+	{
+		"name": "EXERCISE",
+		"type": "SELF_TRACKER",
+		"attributeName": "TRACKER_TYPE",
+		"attributeVal": "SELF",
+		"isActive": "A"
+	},
+	{
+		"name": "EXERCISE",
+		"type": "SELF_TRACKER",
+		"attributeName": "TARGET_VAL",
+		"attributeVal": "NULL",
+		"isActive": "A"
+	},
+	{
+		"name": "EXERCISE",
+		"type": "SELF_TRACKER",
+		"attributeName": "CURRENT_VAL",
+		"attributeVal": "NULL",
+		"isActive": "A"
+	},
+	{
+		"name": "MAID",
+		"type": "MONTHLY_TRACKER",
+		"attributeName": "TRACKER_NAME",
+		"attributeVal": "MAID",
+		"isActive": "A"
+	},
+	{
+		"name": "MAID",
+		"type": "MONTHLY_TRACKER",
+		"attributeName": "TRACKER_TYPE",
+		"attributeVal": "EMPLOYEE",
+		"isActive": "A"
+	},
+	{
+		"name": "MAID",
+		"type": "MONTHLY_TRACKER",
+		"attributeName": "FREQUENCY",
+		"attributeVal": "MONTHLY",
+		"isActive": "A"
+	},
+	{
+		"name": "MAID",
+		"type": "MONTHLY_TRACKER",
+		"attributeName": "HOLIDAY_ALLOWED",
+		"attributeVal": "2",
+		"isActive": "A"
+	},
+	{
+		"name": "MAID",
+		"type": "MONTHLY_TRACKER",
+		"attributeName": "SALARY",
+		"attributeVal": "4000",
+		"isActive": "A"
+	},
+	{
+		"name": "MAID",
+		"type": "MONTHLY_TRACKER",
+		"attributeName": "NOTIFICATION_TYPE",
+		"attributeVal": "EVERY_MONTH_END",
+		"isActive": "A"
+	},
+	{
+		"name": "COOK",
+		"type": "MONTHLY_TRACKER",
+		"attributeName": "TRACKER_NAME",
+		"attributeVal": "COOK",
+		"isActive": "A"
+	},
+	{
+		"name": "COOK",
+		"type": "MONTHLY_TRACKER",
+		"attributeName": "TRACKER_TYPE",
+		"attributeVal": "EMPLOYEE",
+		"isActive": "A"
+	},
+	{
+		"name": "COOK",
+		"type": "MONTHLY_TRACKER",
+		"attributeName": "FREQUENCY",
+		"attributeVal": "MONTHLY",
+		"isActive": "A"
+	},
+	{
+		"name": "COOK",
+		"type": "MONTHLY_TRACKER",
+		"attributeName": "HOLIDAY_ALLOWED",
+		"attributeVal": "2",
+		"isActive": "A"
+	},
+	{
+		"name": "COOK",
+		"type": "MONTHLY_TRACKER",
+		"attributeName": "SALARY",
+		"attributeVal": "4000",
+		"isActive": "A"
+	},
+	{
+		"name": "COOK",
+		"type": "MONTHLY_TRACKER",
+		"attributeName": "NOTIFICATION_TYPE",
+		"attributeVal": "EVERY_MONTH_END",
+		"isActive": "A"
+	},
+	{
+		"name": "EMPLOYEE1",
+		"type": "MONTHLY_TRACKER",
+		"attributeName": "TRACKER_NAME",
+		"attributeVal": "EMPLOYEE1",
+		"isActive": "A"
+	},
+	{
+		"name": "EMPLOYEE1",
+		"type": "MONTHLY_TRACKER",
+		"attributeName": "TRACKER_TYPE",
+		"attributeVal": "EMPLOYEE",
+		"isActive": "A"
+	},
+	{
+		"name": "EMPLOYEE1",
+		"type": "MONTHLY_TRACKER",
+		"attributeName": "FREQUENCY",
+		"attributeVal": "MONTHLY",
+		"isActive": "A"
+	},
+	{
+		"name": "EMPLOYEE1",
+		"type": "MONTHLY_TRACKER",
+		"attributeName": "HOLIDAY_ALLOWED",
+		"attributeVal": "2",
+		"isActive": "A"
+	},
+	{
+		"name": "EMPLOYEE1",
+		"type": "MONTHLY_TRACKER",
+		"attributeName": "SALARY",
+		"attributeVal": "10000",
+		"isActive": "A"
+	},
+	{
+		"name": "EMPLOYEE1",
+		"type": "MONTHLY_TRACKER",
+		"attributeName": "NOTIFICATION_TYPE",
+		"attributeVal": "EVERY_MONTH_END",
+		"isActive": "A"
+	},
+	{
+		"name": "EMPLOYEE2",
+		"type": "MONTHLY_TRACKER",
+		"attributeName": "TRACKER_NAME",
+		"attributeVal": "EMPLOYEE2",
+		"isActive": "A"
+	},
+	{
+		"name": "EMPLOYEE2",
+		"type": "MONTHLY_TRACKER",
+		"attributeName": "TRACKER_TYPE",
+		"attributeVal": "EMPLOYEE",
+		"isActive": "A"
+	},
+	{
+		"name": "EMPLOYEE2",
+		"type": "MONTHLY_TRACKER",
+		"attributeName": "FREQUENCY",
+		"attributeVal": "MONTHLY",
+		"isActive": "A"
+	},
+	{
+		"name": "EMPLOYEE2",
+		"type": "MONTHLY_TRACKER",
+		"attributeName": "HOLIDAY_ALLOWED",
+		"attributeVal": "2",
+		"isActive": "A"
+	},
+	{
+		"name": "EMPLOYEE2",
+		"type": "MONTHLY_TRACKER",
+		"attributeName": "SALARY",
+		"attributeVal": "10000",
+		"isActive": "A"
+	},
+	{
+		"name": "EMPLOYEE2",
+		"type": "MONTHLY_TRACKER",
+		"attributeName": "NOTIFICATION_TYPE",
+		"attributeVal": "EVERY_MONTH_END",
+		"isActive": "A"
+	},
+	{
+		"name": "FAMILY",
+		"type": "FAMILY",
+		"attributeName": "ALLOWED_MEMBERS",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "FAMILY",
+		"type": "FAMILY",
+		"attributeName": "ALLOWED_FAMILY",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "MEDICINE",
+		"type": "FAMILY_SHARE",
+		"attributeName": "SHARE_COUNT_EVERY_DAY",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "ASSETS",
+		"type": "FAMILY_SHARE",
+		"attributeName": "SHARE_COUNT_EVERY_DAY",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "POLICY",
+		"type": "FAMILY_SHARE",
+		"attributeName": "SHARE_COUNT_EVERY_DAY",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "INVESTMENT",
+		"type": "FAMILY_SHARE",
+		"attributeName": "SHARE_COUNT_EVERY_DAY",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "COMMODITY",
+		"type": "FAMILY_SHARE",
+		"attributeName": "SHARE_COUNT_EVERY_DAY",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "HOUSE",
+		"type": "FAMILY_SHARE",
+		"attributeName": "SHARE_COUNT_EVERY_DAY",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "CAR",
+		"type": "FAMILY_SHARE",
+		"attributeName": "SHARE_COUNT_EVERY_DAY",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "FARM_LAND",
+		"type": "FAMILY_SHARE",
+		"attributeName": "SHARE_COUNT_EVERY_DAY",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "TERM_INSURANCE",
+		"type": "FAMILY_SHARE",
+		"attributeName": "SHARE_COUNT_EVERY_DAY",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "HEALTH_INSURANCE",
+		"type": "FAMILY_SHARE",
+		"attributeName": "SHARE_COUNT_EVERY_DAY",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "LIFE_INSURANCE",
+		"type": "FAMILY_SHARE",
+		"attributeName": "SHARE_COUNT_EVERY_DAY",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "MEDI_CLAIM",
+		"type": "FAMILY_SHARE",
+		"attributeName": "SHARE_COUNT_EVERY_DAY",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "HOME_INSURANCE",
+		"type": "FAMILY_SHARE",
+		"attributeName": "SHARE_COUNT_EVERY_DAY",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "CAR_INSURANCE",
+		"type": "FAMILY_SHARE",
+		"attributeName": "SHARE_COUNT_EVERY_DAY",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "BIKE_INSURANCE",
+		"type": "FAMILY_SHARE",
+		"attributeName": "SHARE_COUNT_EVERY_DAY",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "CHILD_SAVING_PLAN",
+		"type": "FAMILY_SHARE",
+		"attributeName": "SHARE_COUNT_EVERY_DAY",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "RETIREMENT_PLAN",
+		"type": "FAMILY_SHARE",
+		"attributeName": "SHARE_COUNT_EVERY_DAY",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "DEPOSIT",
+		"type": "FAMILY_SHARE",
+		"attributeName": "SHARE_COUNT_EVERY_DAY",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "FUNDS",
+		"type": "FAMILY_SHARE",
+		"attributeName": "SHARE_COUNT_EVERY_DAY",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "STOCK",
+		"type": "FAMILY_SHARE",
+		"attributeName": "SHARE_COUNT_EVERY_DAY",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "BONDS",
+		"type": "FAMILY_SHARE",
+		"attributeName": "SHARE_COUNT_EVERY_DAY",
+		"attributeVal": "1",
+		"isActive": "A"
+	},
+	{
+		"name": "ULIP",
+		"type": "FAMILY_SHARE",
+		"attributeName": "SHARE_COUNT_EVERY_DAY",
+		"attributeVal": "1",
+		"isActive": "A"
+	}
+]

@@ -1,10 +1,10 @@
 [
   {
-    "planId": "101",
-    "validityDays": "365",
+    "planId": 101,
+    "validityDays": 365,
     "planName": "FREE",
-    "planBuyPrice": "0",
-    "planActualPrice": "0",
+    "planBuyPrice": 0,
+    "planActualPrice": 0,
     "planCurrency": "INR",
     "planStatus": "ACTIVE",
     "countryId": "IND",
@@ -12,11 +12,11 @@
     "planDesc": "All Free app functions are available for the user. All App functions can be used offline on device. Ad's will be available when online. Following are app main utils: \\n* Manage Asset & Family. \\n* Manage Portfolio's \\n* Notes \\n* Plan List \\n* Calendar \\n* Self Tracker "
   },
   {
-    "planId": "102",
-    "validityDays": "365",
+    "planId": 102,
+    "validityDays": 365,
     "planName": "PRIME-FAMILY",
-    "planBuyPrice": "299",
-    "planActualPrice": "299",
+    "planBuyPrice": 299,
+    "planActualPrice": 299,
     "planCurrency": "INR",
     "planStatus": "ACTIVE",
     "countryId": "IND",
@@ -24,11 +24,11 @@
     "planDesc": "All Free app functions are available for the user. All App functions can be used offline on device. Ad's will be available when online. Following are app main utils: \\n* Manage Asset & Family. \\n* Manage Portfolio's \\n* Notes \\n* Plan List \\n* Calendar \\n* Self Tracker "
   },
   {
-    "planId": "103",
-    "validityDays": "1111",
-    "planName": "PRICE-INFLUENCER",
-    "planBuyPrice": "999",
-    "planActualPrice": "999",
+    "planId": 103,
+    "validityDays": 1111,
+    "planName": "PRIME-INFLUENCER",
+    "planBuyPrice": 999,
+    "planActualPrice": 999,
     "planCurrency": "INR",
     "planStatus": "ACTIVE",
     "countryId": "IND",

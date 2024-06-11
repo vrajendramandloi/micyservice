@@ -1,6 +1,7 @@
 package com.uni.micy.service.controller;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+/*
 
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
@@ -27,4 +28,4 @@ public class SwaggerConfig {
                 .license("Apache 2.0").licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html").version("1.0.0")
                 .build();
     }
-}
+}*/

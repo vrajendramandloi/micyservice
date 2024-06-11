@@ -1,10 +1,11 @@
 package com.uni.micy.service.controller;
 
 import com.uni.micy.service.util.AppUtils;
+import com.uni.micy.service.util.JarPathUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.core.io.ClassPathResource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
@@ -33,21 +34,13 @@ public class DownloadInitSetup {
     private Logger log = LoggerFactory.getLogger(DownloadInitSetup.class);
     private String jarPath;
 
-    public String getParentDirectoryFromJar() {
-        String dirtyPath = getClass().getResource("").toString();
-        String jarPath = dirtyPath.replaceAll("^.*file:/", "");
-        jarPath = jarPath.replaceAll("jar!.*", "jar");
-        jarPath = jarPath.replaceAll("%20", " ");
-        if (!jarPath.endsWith(".jar")) {
-            jarPath = jarPath.replaceAll("/classes/.*", "/classes/");
-        }
-        String directoryPath = Paths.get(jarPath).getParent().toString(); //Paths - from java 8
-        return directoryPath;
-    }
+    @Autowired
+    private JarPathUtil jarPathUtil;
+
 
     @PostConstruct
     public void init() {
-        this.jarPath = getParentDirectoryFromJar();
+        this.jarPath = jarPathUtil.getJarPath();
         jsonZipGeneratedFile = this.readFromPathAndCreateZip(jarPath+"/json", "jsonConfig.zip");
         soundZipGeneratedFile = this.readFromPathAndCreateZip(jarPath+"/sound", "soundConfig.zip");
     }

@@ -30,7 +30,10 @@
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-starter-mail</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
 		<!-- Swagger -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -46,7 +49,7 @@
 			<artifactId>slf4j-api</artifactId>
 			<version>1.7.26</version>
 		</dependency>
-		<dependency>
+		<!--<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-boot-starter</artifactId>
 			<version>3.0.0</version>
@@ -55,7 +58,7 @@
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>3.0.0</version>
-		</dependency>
+		</dependency>-->
 	</dependencies>
 
 	<build>
@@ -141,13 +144,8 @@
 							<outputDirectory>${basedir}/target/common</outputDirectory>
 							<resources>
 								<resource>
-									<targetPath>${basedir}/target/common/json</targetPath>
-									<directory>${project.basedir}/src/main/resources/json</directory>
-									<filtering>true</filtering>
-								</resource>
-								<resource>
-									<targetPath>${basedir}/target/common/sound</targetPath>
-									<directory>${project.basedir}/src/main/resources/sound</directory>
+									<targetPath>${basedir}/target/common/</targetPath>
+									<directory>${project.basedir}/src/main/resources/</directory>
 									<filtering>true</filtering>
 								</resource>
 							</resources>

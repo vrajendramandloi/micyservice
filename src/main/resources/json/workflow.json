@@ -1,10 +1,492 @@
 [
   {
-    "flowId": "",
-    "status": "",
-    "component": "",
-    "page": "",
-    "details": "",
-    "planId": ""
+    "name": "GROCERY",
+    "type": "DASHBOARD_LIST",
+    "parent": "NULL",
+    "displayImage": "lib/images/listify/groceries.avif",
+    "displayName": "Grocery",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "1"
+  },
+  {
+    "name": "SHOPPING",
+    "type": "DASHBOARD_LIST",
+    "parent": "NULL",
+    "displayImage": "lib/images/listify/shopping.avif",
+    "displayName": "Shopping",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "2"
+  },
+  {
+    "name": "GOALS",
+    "type": "DASHBOARD_LIST",
+    "parent": "NULL",
+    "displayImage": "lib/images/listify/goals.avif",
+    "displayName": "D-Clutter",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "3"
+  },
+  {
+    "name": "IDEAS",
+    "type": "DASHBOARD_LIST",
+    "parent": "NULL",
+    "displayImage": "lib/images/listify/ideas.avif",
+    "displayName": "Ideas",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "4"
+  },
+  {
+    "name": "KIDS",
+    "type": "DASHBOARD_LIST",
+    "parent": "NULL",
+    "displayImage": "lib/images/listify/kids.avif",
+    "displayName": "kids",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "5"
+  },
+  {
+    "name": "FAMILY",
+    "type": "FAMILY",
+    "parent": "NULL",
+    "displayImage": "lib/images/family/family.avif",
+    "displayName": "My Family",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "1"
+  },
+  {
+    "name": "MEDICINE",
+    "type": "FAMILY_SHARE",
+    "parent": "NULL",
+    "displayImage": "lib/images/family/medicine.avif",
+    "displayName": "Medicines",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "1"
+  },
+  {
+    "name": "ASSETS",
+    "type": "FAMILY_SHARE",
+    "parent": "NULL",
+    "displayImage": "lib/images/family/asset.avif",
+    "displayName": "Assets",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "2"
+  },
+  {
+    "name": "POLICY",
+    "type": "FAMILY_SHARE",
+    "parent": "NULL",
+    "displayImage": "lib/images/family/policy.avif",
+    "displayName": "Policy",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "3"
+  },
+  {
+    "name": "INVESTMENT",
+    "type": "FAMILY_SHARE",
+    "parent": "NULL",
+    "displayImage": "lib/images/family/investment.avif",
+    "displayName": "Investment",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "4"
+  },
+  {
+    "name": "COMMODITY",
+    "type": "FAMILY_SHARE",
+    "parent": "ASSETS",
+    "displayImage": "lib/images/family/assets/commodity.avif",
+    "displayName": "Jwel",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "1"
+  },
+  {
+    "name": "HOUSE",
+    "type": "FAMILY_SHARE",
+    "parent": "ASSETS",
+    "displayImage": "lib/images/family/assets/commodity.avif",
+    "displayName": "House",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "2"
+  },
+  {
+    "name": "CAR",
+    "type": "FAMILY_SHARE",
+    "parent": "ASSETS",
+    "displayImage": "lib/images/family/assets/commodity.avif",
+    "displayName": "Car",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "3"
+  },
+  {
+    "name": "FARM_LAND",
+    "type": "FAMILY_SHARE",
+    "parent": "ASSETS",
+    "displayImage": "lib/images/family/assets/commodity.avif",
+    "displayName": "Farm / Land",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "4"
+  },
+  {
+    "name": "TERM_INSURANCE",
+    "type": "FAMILY_SHARE",
+    "parent": "POLICY",
+    "displayImage": "lib/images/family/policy/terminsurance.avif",
+    "displayName": "Term Insurance",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "1"
+  },
+  {
+    "name": "HEALTH_INSURANCE",
+    "type": "FAMILY_SHARE",
+    "parent": "POLICY",
+    "displayImage": "lib/images/family/policy/terminsurance.avif",
+    "displayName": "Health Insurance",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "2"
+  },
+  {
+    "name": "LIFE_INSURANCE",
+    "type": "FAMILY_SHARE",
+    "parent": "POLICY",
+    "displayImage": "lib/images/family/policy/terminsurance.avif",
+    "displayName": "Life Insurance",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "3"
+  },
+  {
+    "name": "MEDI_CLAIM",
+    "type": "FAMILY_SHARE",
+    "parent": "POLICY",
+    "displayImage": "lib/images/family/policy/terminsurance.avif",
+    "displayName": "Medi Claim ",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "4"
+  },
+  {
+    "name": "HOME_INSURANCE",
+    "type": "FAMILY_SHARE",
+    "parent": "POLICY",
+    "displayImage": "lib/images/family/policy/terminsurance.avif",
+    "displayName": "Home Insurance",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "5"
+  },
+  {
+    "name": "CAR_INSURANCE",
+    "type": "FAMILY_SHARE",
+    "parent": "POLICY",
+    "displayImage": "lib/images/family/policy/terminsurance.avif",
+    "displayName": "Car Insurance",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "6"
+  },
+  {
+    "name": "BIKE_INSURANCE",
+    "type": "FAMILY_SHARE",
+    "parent": "POLICY",
+    "displayImage": "lib/images/family/policy/terminsurance.avif",
+    "displayName": "Bike Insurance",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "7"
+  },
+  {
+    "name": "CHILD_SAVING_PLAN",
+    "type": "FAMILY_SHARE",
+    "parent": "INVESTMENT",
+    "displayImage": "lib/images/family/insurance/terminsurance.avif",
+    "displayName": "Child Saving",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "1"
+  },
+  {
+    "name": "RETIREMENT_PLAN",
+    "type": "FAMILY_SHARE",
+    "parent": "INVESTMENT",
+    "displayImage": "lib/images/family/insurance/terminsurance.avif",
+    "displayName": "Retirement",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "2"
+  },
+  {
+    "name": "DEPOSIT",
+    "type": "FAMILY_SHARE",
+    "parent": "INVESTMENT",
+    "displayImage": "lib/images/family/insurance/terminsurance.avif",
+    "displayName": "Deposit",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "3"
+  },
+  {
+    "name": "FUNDS",
+    "type": "FAMILY_SHARE",
+    "parent": "INVESTMENT",
+    "displayImage": "lib/images/family/insurance/terminsurance.avif",
+    "displayName": "Mutual Funds",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "4"
+  },
+  {
+    "name": "STOCK",
+    "type": "FAMILY_SHARE",
+    "parent": "INVESTMENT",
+    "displayImage": "lib/images/family/insurance/terminsurance.avif",
+    "displayName": "Stocks",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "5"
+  },
+  {
+    "name": "BONDS",
+    "type": "FAMILY_SHARE",
+    "parent": "INVESTMENT",
+    "displayImage": "lib/images/family/insurance/terminsurance.avif",
+    "displayName": "Bonds",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "6"
+  },
+  {
+    "name": "ULIP",
+    "type": "FAMILY_SHARE",
+    "parent": "INVESTMENT",
+    "displayImage": "lib/images/family/insurance/terminsurance.avif",
+    "displayName": "Ulip",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "7"
+  },
+  {
+    "name": "ASSOCIATE_PRODUCTS",
+    "type": "DASHBOARD",
+    "parent": "NULL",
+    "displayImage": "lib/images/homepage/associateProducts.avif",
+    "displayName": "Associate Product",
+    "isActive": "NA",
+    "planName": "PRIME-INFLUENCER",
+    "index": "1"
+  },
+  {
+    "name": "BUDGET",
+    "type": "DASHBOARD",
+    "parent": "NULL",
+    "displayImage": "lib/images/homepage/budget.avif",
+    "displayName": "Budget",
+    "isActive": "NA",
+    "planName": "PRIME-INFLUENCER",
+    "index": "2"
+  },
+  {
+    "name": "DAIRY",
+    "type": "DASHBOARD",
+    "parent": "NULL",
+    "displayImage": "lib/images/homepage/dairy.avif",
+    "displayName": "Dairy",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "3"
+  },
+  {
+    "name": "TRACKER",
+    "type": "DASHBOARD",
+    "parent": "NULL",
+    "displayImage": "lib/images/homepage/tracker.avif",
+    "displayName": "Tracker",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "4"
+  },
+  {
+    "name": "REMINDER",
+    "type": "CALENDER",
+    "parent": "NULL",
+    "displayImage": "lib/images/calendar/reminder.avif",
+    "displayName": "Reminder",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "1"
+  },
+  {
+    "name": "EVENT_TOUR",
+    "type": "CALENDER",
+    "parent": "NULL",
+    "displayImage": "lib/images/calendar/event.avif",
+    "displayName": "EventTour",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "2"
+  },
+  {
+    "name": "VIDEO_CAMPAIGN",
+    "type": "CALENDER",
+    "parent": "NULL",
+    "displayImage": "lib/images/calendar/campaign.avif",
+    "displayName": "Video Campaign",
+    "isActive": "NA",
+    "planName": "PRIME-INFLUENCER",
+    "index": "3"
+  },
+  {
+    "name": "PARTNER_PRODUCTS",
+    "type": "CALENDER",
+    "parent": "NULL",
+    "displayImage": "lib/images/calendar/product.avif",
+    "displayName": "Partner Products",
+    "isActive": "NA",
+    "planName": "PRIME-INFLUENCER",
+    "index": "4"
+  },
+  {
+    "name": "INSTAGRAM_REVIEW",
+    "type": "CALENDER",
+    "parent": "NULL",
+    "displayImage": "lib/images/calendar/reminder.avif",
+    "displayName": "Instagram Review",
+    "isActive": "NA",
+    "planName": "PRIME-INFLUENCER",
+    "index": "5"
+  },
+  {
+    "name": "MILK",
+    "type": "DAILY_TRACKER",
+    "parent": "NULL",
+    "displayImage": "lib/images/tracker/milk.avif",
+    "displayName": "Milk",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "1"
+  },
+  {
+    "name": "NEWSPAPER",
+    "type": "DAILY_TRACKER",
+    "parent": "NULL",
+    "displayImage": "lib/images/tracker/newsPaper.avif",
+    "displayName": "Newspaper",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "2"
+  },
+  {
+    "name": "IRONCLOTHS",
+    "type": "ONDEMAND_TRACKER",
+    "parent": "NULL",
+    "displayImage": "lib/images/tracker/cloths.avif",
+    "displayName": "Wash & Iron",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "4"
+  },
+  {
+    "name": "WATER",
+    "type": "SELF_TRACKER",
+    "parent": "NULL",
+    "displayImage": "lib/images/tracker/waterdrop.avif",
+    "displayName": "Water",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "5"
+  },
+  {
+    "name": "FEELINGS",
+    "type": "SELF_TRACKER",
+    "parent": "NULL",
+    "displayImage": "lib/images/tracker/emoji2.avif",
+    "displayName": "Feelings",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "6"
+  },
+  {
+    "name": "MEDITATION",
+    "type": "SELF_TRACKER",
+    "parent": "NULL",
+    "displayImage": "lib/images/tracker/meditation.avif",
+    "displayName": "Meditation",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "7"
+  },
+  {
+    "name": "EXERCISE",
+    "type": "SELF_TRACKER",
+    "parent": "NULL",
+    "displayImage": "lib/images/tracker/exercise.avif",
+    "displayName": "Exercise",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "8"
+  },
+  {
+    "name": "MAID",
+    "type": "MONTHLY_TRACKER",
+    "parent": "NULL",
+    "displayImage": "lib/images/tracker/maid.avif",
+    "displayName": "House Helper",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "9"
+  },
+  {
+    "name": "COOK",
+    "type": "MONTHLY_TRACKER",
+    "parent": "NULL",
+    "displayImage": "lib/images/tracker/cook.avif",
+    "displayName": "Cook",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "10"
+  },
+  {
+    "name": "EMPLOYEE1",
+    "type": "MONTHLY_TRACKER",
+    "parent": "NULL",
+    "displayImage": "lib/images/tracker/employee.avif",
+    "displayName": "Employee1",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "11"
+  },
+  {
+    "name": "EMPLOYEE2",
+    "type": "MONTHLY_TRACKER",
+    "parent": "NULL",
+    "displayImage": "lib/images/tracker/employee.avif",
+    "displayName": "Employee2",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "12"
+  },
+  {
+    "name": "DUMMY",
+    "type": "TASK_LIST",
+    "parent": "NULL",
+    "displayImage": "lib/images/task/dummy.avif",
+    "displayName": "dummy1",
+    "isActive": "A",
+    "planName": "FREE",
+    "index": "1"
   }
 ]
